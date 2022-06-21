@@ -40,7 +40,11 @@ app.use(cors({
     credentials: true
 }))
 
-app.get('/', async (req, res) => {
+app.get('/', (req, res) => {
+    res.send('Hello Koibanx')
+})
+
+app.get('/stores', async (req, res) => {
     const page = req.query.p || 1;
     const q = JSON.parse(req.query.q);
 
