@@ -6,6 +6,8 @@ const mongoosePaginate = require('mongoose-paginate-v2');
 const dotenv = require('dotenv');
 dotenv.config();
 
+var PORT = process.env.PORT || 3001;
+
 const url = process.env.MONGO;
 mongoose.connect(url, {
     useNewUrlParser: true,
@@ -62,4 +64,4 @@ app.get('/stores', async (req, res) => {
     })
 })
 
-app.listen(3001, () => console.log('server in port 3001'));
+app.listen(PORT, () => console.log('server in port ' + PORT));
