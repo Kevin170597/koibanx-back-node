@@ -3,7 +3,6 @@ const app = express();
 const mongoose = require('mongoose');
 const cors = require('cors');
 const mongoosePaginate = require('mongoose-paginate-v2');
-const cors = require('cors');
 const dotenv = require('dotenv');
 dotenv.config();
 
